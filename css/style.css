@@ -48,12 +48,18 @@ body {
   color: #E32209;
 }
 
+.wrapper__inicio {
+  background-image: url("../img/back1.png");
+  background-position: 15px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 5vw;
+}
+
 .header__inicio {
   margin-top: 60px;
-  padding-top: 20px;
   height: 500px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 
@@ -62,7 +68,6 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 80px;
-  /* align-self: flex-start; */
   font-weight: 800;
 }
 
@@ -247,7 +252,7 @@ body {
   flex-direction: row;
   align-items: flex-start;
   gap: 20px;
-  padding: 20px;
+  padding: 30px;
   flex-wrap: wrap;
 }
 
@@ -312,6 +317,10 @@ body {
 
 
 
-
+@media(min-width: 1440px){
+  .wrapper__inicio {
+    padding: 0 calc(100vw - 1440px);
+  }
+}
 
 
