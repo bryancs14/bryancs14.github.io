@@ -13,3 +13,15 @@ window.addEventListener('scroll', function() {
     }
     }) 
 })
+
+let links = document.querySelectorAll(".nav__link");
+
+links.forEach((link) => {
+    link.onclick = function() {
+        links.forEach((link) => {
+            link.classList.remove("selected");
+        })
+        link.classList.add("selected");
+    }
+    
+})
