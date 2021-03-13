@@ -10,18 +10,38 @@ window.addEventListener('scroll', function() {
         
         if(posicionObj1 < tamanoPantalla) {
             animarCirculo.style.strokeDashoffset = 220;
-    }
+        }
     }) 
-})
+});
 
 let links = document.querySelectorAll(".nav__link");
 
-links.forEach((link) => {
-    link.onclick = function() {
-        links.forEach((link) => {
-            link.classList.remove("selected");
-        })
-        link.classList.add("selected");
+
+function linkClick() {
+    links.forEach((link) => {
+        link.onclick = function() {
+            links.forEach((link) => {
+                link.classList.remove("selected");
+            });
+            link.classList.add("selected");
+        }
+    });
+}
+
+linkClick();
+
+window.addEventListener('scroll', function () {
+    let sections = document.querySelectorAll("section");
+    sections = Array.from(sections)
+    sections.forEach((section, i) => {
+        let posicionSection = section.getBoundingClientRect().top;
+        let tamanoPantalla = window.innerHeight/3;
+        
+        if(posicionSection < tamanoPantalla) {
+            links.forEach((linkR) => {
+                linkR.classList.remove("selected");
+            });
+            links[i+1].classList.add("selected");
     }
-    
+    });
 })
