@@ -85,7 +85,8 @@ body {
   font-size: 80px;
   font-weight: 800;
   position: relative;
-  /* border: 5px solid #f4f4f460; */
+  border-radius: 5px;
+  border: 1px solid #f4f4f420;
 }
 
 .header__inicio>p::before {
@@ -95,7 +96,7 @@ body {
   position: absolute;
   top: 0px;
   left: 0px;
-  border-radius: 20px;
+  border-radius: 5px;
   filter: blur(10px);
   background-color: #ffffff10;
 }
@@ -107,9 +108,10 @@ body {
     #D3FF24 80%,
     #FFDE17
   );
-  /* border: 5px solid #f4f4f460; */
   -webkit-background-clip: text;
   position: relative;
+  border-radius: 5px;
+  border: 1px solid #f4f4f460;
 }
 
 .header__inicio>h1::before {
@@ -119,7 +121,7 @@ body {
   position: absolute;
   top: 0px;
   left: 0px;
-  border-radius: 20px;
+  border-radius: 5px;
   filter: blur(10px);
   background-color: #ffffff10;
 }
