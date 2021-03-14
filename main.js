@@ -15,14 +15,13 @@ window.addEventListener('scroll', function() {
 });
 
 let links = document.querySelectorAll(".nav__link");
-
+links = Array.from(links);
 
 function linkClick() {
     links.forEach((link) => {
         link.onclick = function() {
-            links.forEach((link) => {
-                link.classList.remove("selected");
-            });
+            let linkSelected = document.querySelector(".nav__link.selected")
+            linkSelected.classList.remove("selected");
             link.classList.add("selected");
         }
     });
@@ -33,15 +32,21 @@ linkClick();
 window.addEventListener('scroll', function () {
     let sections = document.querySelectorAll("section");
     sections = Array.from(sections)
+    let tamanoPantalla = window.innerHeight/3;
+    let posicionEstudios = sections[0].getBoundingClientRect().top;
+
+
     sections.forEach((section, i) => {
         let posicionSection = section.getBoundingClientRect().top;
-        let tamanoPantalla = window.innerHeight/3;
-        
+        if(posicionEstudios < 1000 && posicionEstudios >= 240 ){
+            let linkSelected = document.querySelector(".nav__link.selected")
+            linkSelected.classList.remove("selected");
+            links[0].classList.add("selected");
+        }
         if(posicionSection < tamanoPantalla) {
-            links.forEach((linkR) => {
-                linkR.classList.remove("selected");
-            });
+            let linkSelected = document.querySelector(".nav__link.selected")
+            linkSelected.classList.remove("selected");
             links[i+1].classList.add("selected");
-    }
+        }
     });
 })
