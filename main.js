@@ -1,8 +1,9 @@
+let circular = document.querySelectorAll(".circular__svg");
+circular = Array.from(circular);
+let sectionSkills = document.querySelector(".skills");
+
 window.addEventListener('scroll', function() {
 
-    let circular = document.querySelectorAll(".circular__svg");
-    let sectionSkills = document.querySelector(".skills")
-    circular = Array.from(circular);
     circular.forEach((circulo) => {
         let animarCirculo = circulo.getElementsByTagName('circle')[1];
         let posicionObj1 = sectionSkills.getBoundingClientRect().top;
@@ -29,12 +30,12 @@ function linkClick() {
 
 linkClick();
 
+let sections = document.querySelectorAll("section");
+sections = Array.from(sections)
+
 window.addEventListener('scroll', function () {
-    let sections = document.querySelectorAll("section");
-    sections = Array.from(sections)
     let tamanoPantalla = window.innerHeight/3;
     let posicionEstudios = sections[0].getBoundingClientRect().top;
-
 
     sections.forEach((section, i) => {
         let posicionSection = section.getBoundingClientRect().top;
@@ -49,5 +50,30 @@ window.addEventListener('scroll', function () {
             links[i+1].classList.add("selected");
         }
     });
+
 })
+
+let button = document.querySelectorAll(".nav__link")[3];
+
+button.onclick = function() {
+    window.scrollBy({
+        top: 1000,
+        behavior: "smooth"
+    })
+    console.log(position);
+    
+}
+
+let headerNav = document.querySelector(".header__nav")
+
+window.addEventListener("scroll", function() {
+    if(window.scrollY >= 60) {
+        console.log(window.scrollY);
+        headerNav.style.height = "60px";
+        headerNav.style.boxShadow = "0px 1px 0px red";
+    } else if(window.scrollY <= 15){
+        headerNav.style.height = "70px";
+        headerNav.style.boxShadow = "unset";
+    }
+});
 
