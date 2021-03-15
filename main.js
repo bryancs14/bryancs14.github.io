@@ -70,7 +70,7 @@ window.addEventListener("scroll", function() {
     if(window.scrollY >= 60) {
         console.log(window.scrollY);
         headerNav.style.height = "60px";
-        headerNav.style.boxShadow = "0px 1px 0px red";
+        headerNav.style.boxShadow = "0px 1px 0px #a4f041";
     } else if(window.scrollY <= 15){
         headerNav.style.height = "70px";
         headerNav.style.boxShadow = "unset";

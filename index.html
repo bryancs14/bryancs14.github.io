@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="css/styles.css">
     <title>Bryan Cueva - Portfolio</title>
 </head>
+
 <body>
     <header class="header">
         <nav class="header__nav">
@@ -17,14 +18,15 @@
                 <li><a class="nav__link selected" href="#">Inicio</a></li>
                 <li><a class="nav__link" href="#estudios">Estudios</a></li>
                 <li><a class="nav__link" href="#skills">Skills</a></li>
-                <li><a class="nav__link" href="#">Proyectos</a></li>
+                <li><a class="nav__link" href="#proyectos">Proyectos</a></li>
                 <li><a class="nav__link" href="#contacto">Contactame</a></li>
             </ul>
         </nav>
         <div class="header__inicio">
-            <p class="inicio__presen">Hola, soy<span>Bryan Cueva</span></p>
-            <p><span class="typed"></span><span class="typed__cursor">|</span></p>
-            <div class="redes">
+            <div class="inicio__left">
+                <p class="inicio__presen">Hola, soy<span>Bryan Cueva</span></p>
+                <p><span class="typed"></span><span class="typed__cursor">|</span></p>
+                <div class="redes">
                 <figure>
                     <svg xmlns="http://www.w3.org/2000/svg" width="2500" height="2500"
                         viewBox="0 0 2499.899999999999 2500">
@@ -69,8 +71,13 @@
                 <figure>
                     <img src="images/githut_logo.png" alt="">
                 </figure>
+                </div>
+            </div>
+            <div class="inicio__rigth">
+                <p>Me considero una persona responsable y creativa con iniciativa en la organización y desarrollo de proyectos.</p>
             </div>
         </div>
+        
     </header>
     <main class="main">
         <section class="estudios" id="estudios">
@@ -78,17 +85,15 @@
             <div class="estudios__container">
                 <div class="estudios__linea">
                     <div class="estudios__years">
-                        <p>2029</p>
-                        <p>2029</p>
-                        <p>2029</p>
-                        <p>2029</p>
+                        <p>2019</p>
+                        <p>2020</p>
+                        <p>2021</p>
                     </div>
                     <div class="linea"></div>
                     <div class="estudios__descri">
-                        <p>Universidad nananannananshsh</p>
-                        <p>Universidad nananannananshsh</p>
-                        <p>Universidad nananannananshsh</p>
-                        <p>Universidad nananannananshsh</p>
+                        <p>Univ. Privada del Norte<br>Ing. de sistemas</p>
+                        <p>Udemy<br>Flutter Intermedio</p>
+                        <p>CodiGo - TECSUP<br>Web Fullstack</p>
                     </div>
                 </div>
             </div>
@@ -142,16 +147,24 @@
                 </div>
             </div>
         </section>
-        <section class="contacto" id="contacto">
-            <div class="contacto__mensaje">
-                <p>Contactame y hagamos realidad tus proyectos</p>
+        <section class="proyectos" id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="proyectos__container">
+                <p>En desarrollo...</p>
             </div>
-            <form class="contacto__form" action="">
-                <input type="text" name="" id="form__nombre" placeholder="Nombre">
-                <input type="email" name="" id="form__email" placeholder="Email">
-                <textarea name="" id="form__mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                <button>Enviar</button>
-            </form>
+        </section>
+        <section class="contacto" id="contacto">
+            <div class="contacto__container">
+                <div class="contacto__mensaje">
+                    <p>Contactame y hagamos realidad tus proyectos</p>
+                </div>
+                <form class="contacto__form" action="">
+                    <input type="text" name="" id="form__nombre" placeholder="Nombre">
+                    <input type="email" name="" id="form__email" placeholder="Email">
+                    <textarea name="" id="form__mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>Enviar</button>
+                </form>
+            </div>
         </section>
     </main>
     <!-- Compiled and minified JavaScript -->
