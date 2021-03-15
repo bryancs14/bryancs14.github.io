@@ -123,6 +123,14 @@ body {
   background-color: #ffffff10;
 } */
 
+.typed{
+  font-size: 40px;
+}
+
+.typed__cursor{
+  font-size: 40px;
+}
+
 .main {
   display: flex;
   flex-direction: column;

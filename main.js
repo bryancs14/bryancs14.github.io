@@ -77,3 +77,48 @@ window.addEventListener("scroll", function() {
     }
 });
 
+let typed = document.querySelector(".typed")
+
+
+let imprimirArreglo = function(array, hasta) {
+    let palabra = "";
+    array.map((e, i) => {
+        if(i <= hasta) {
+            palabra += e;
+        }
+    })
+    typed.innerHTML = palabra;
+}
+
+let writing = (str) => {
+    let arrayFromStr = str.split('');
+    let i = 0;
+    let printStr = setInterval(function () {
+        typed.innerHTML += arrayFromStr[i];
+        i++;
+        if(i === arrayFromStr.length) {
+            let erase = setInterval(function(){
+                imprimirArreglo(arrayFromStr, i-1)
+                i--;
+                if(i === -1) {
+                    clearInterval(erase);
+                }
+            },200)
+            clearInterval(printStr);
+        }
+    },200)
+}
+
+let writingInfinite = function() {
+    let frases = ["Diseñador Web", "Diseñador Movil"];
+    let cont = 0;
+    setInterval(function() {
+        writing(frases[cont]);
+        cont++;
+        if(cont === frases.length){
+            cont = 0;
+        }
+    },6200);
+}
+
+writingInfinite();
