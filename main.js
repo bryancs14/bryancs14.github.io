@@ -97,13 +97,14 @@ let writing = (str) => {
         typed.innerHTML += arrayFromStr[i];
         i++;
         if(i === arrayFromStr.length) {
+            setTimeout(function() {console.log();}, 100)
             let erase = setInterval(function(){
                 imprimirArreglo(arrayFromStr, i-1)
                 i--;
                 if(i === -1) {
                     clearInterval(erase);
                 }
-            },200)
+            },25)
             clearInterval(printStr);
         }
     },200)
@@ -118,7 +119,7 @@ let writingInfinite = function() {
         if(cont === frases.length){
             cont = 0;
         }
-    },6200);
+    },3600);
 }
 
 writingInfinite();

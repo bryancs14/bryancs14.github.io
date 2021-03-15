@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
 :root {
   --colorPrincipal: #D3FF24;
   --colorSecundario: #EBF227;
@@ -32,12 +34,20 @@ body {
   box-shadow: 1px 0px 5px #111;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
   transition: all 0.3s linear;
+}
+
+.nombre__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Aclonica', sans-serif;
+  letter-spacing: 3px;
 }
 
 .nav__list {
@@ -80,7 +90,7 @@ body {
   gap: 10px;
 }
 
-.header__inicio>h1{
+.inicio__presen{
   max-width: 1440px;
   color: #f4f4f4;
   display: flex;
@@ -104,7 +114,7 @@ body {
   background-color: #ffffff10;
 } */
 
-.header__inicio>h1>span{
+.inicio__presen>span{
   color: var(--colorPrincipal);
   font-size: 90px;
   text-shadow: 0px 0px 7px var(--colorPrincipal);
@@ -319,7 +329,7 @@ body {
   gap: 15px;
   /* border-radius: 5px; */
   /* background: rgba( 255, 255, 255, 0.20 ); */
-  box-shadow: 0 8px 32px 0 #A61F1F30;
+  box-shadow: 0 5px 10px 0 #44444420;
   backdrop-filter: blur( 10.0px );
   -webkit-backdrop-filter: blur( 10.0px );
   border-radius: 10px;
@@ -385,12 +395,84 @@ body {
   }
 } */
 
-
-
-@media(min-width: 1440px){
-  /* .header__inicio {
-    padding: 0 calc(100vw - 1440px);
-  } */
+.contacto {
+  width: 900px;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333;
 }
 
 
+.contacto__form {
+  /* flex: 1; */
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacto__form input, .contacto__form textarea {
+  height: 50px;
+  width: 250px;
+  border: 1px solid #1C88C7;
+  border-radius: 10px;
+  margin: 10px;
+  padding-left: 10px;
+  outline: none;
+  color: #1C88C7;
+  cursor: pointer;
+}
+
+.contacto__form textarea {
+  height: 100px;
+  padding-top: 10px;
+}
+
+.contacto__form input::placeholder, .contacto__form textarea::placeholder {
+  color: #4b9ece;
+  font-weight: 600;
+}
+
+.contacto__form button{
+  border: none;
+  height: 30px;
+  width: 100px;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #1C88C7;
+  color: #f4f4f4;
+}
+
+.redes {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.redes figure svg{
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.redes figure img{
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.contacto__mensaje {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacto__mensaje>p{
+  font-family: 'Aclonica', sans-serif;
+  width: 200px;
+  font-size: 30px;
+}
